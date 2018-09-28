@@ -1,0 +1,44 @@
+img {
+    display: block;
+
+    transition: 1s;
+
+    /* animation: slide 1s forwards; */
+    transform-origin: top center;
+
+}
+
+div:hover img {
+    display: block;
+    animation: highlights 1s forwards;
+}
+
+img:hover {
+    /* opacity: 0.25; */
+}
+
+@keyframes slide {
+    0% {
+        /* transform: translate(0,0) rotate(0) rotate3d(0, 0, 0, 0); */
+        transform: scaleY(0);
+    }
+
+    50% {
+        /* transform: translate(300%, 50%) rotate(90deg) rotate3d(1, 0, 1, 90deg); */
+    }
+
+    100% {
+        /* transform: translate(100%, 37%) rotate(-90deg) rotate3d(1, 1, 1, 270deg); */
+        transform: scaleY(100%);
+    }
+}
+
+@keyframes highlights {
+    0% {
+        transform: scale(1,1);
+    }
+
+    100% {
+        transform: scale(1.05, 1.05);
+    }
+}
